@@ -1,0 +1,32 @@
+---
+- name: Install dependencies
+  apt:
+    name:
+      - docker.io
+      - apt-transport-https
+      - ca-certificates
+      - curl
+    state: present
+    update_cache: yes
+
+- name: Start Docker
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Add ubuntu user to docker group
+  user:
+    name: ubuntu
+    groups: docker
+    append: yes
+
+- name: Copy docker daemon config
+  copy:
+    src: ../../files/daemon.json
+    dest: /etc/docker/daemon.json
+
+- name: Restart Docker
+  service:
+    name: docker
+    state: restarted
