@@ -1,0 +1,11 @@
+---
+- name: Configure Jenkins Server
+  hosts: jenkins
+  become: yes
+
+  roles:
+    - docker
+    - kubectl
+    - helm
+    - trivy
+    - jenkins
