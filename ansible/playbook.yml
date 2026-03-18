@@ -4,8 +4,6 @@
   become: yes
 
   roles:
-    - docker
     - kubectl
     - helm
     - trivy
-    - jenkins
