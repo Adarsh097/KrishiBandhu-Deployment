@@ -14,7 +14,7 @@ spec:
     - krishibandhu.adtechs.xyz
     secretName: krishibandhu-tls-secret  # Cert-Manager will manage this
   rules:
-  - host: krishibandhu.adtechs.xyz
+  - host: krishbandhu.adtechs.xyz
     http:
       paths:
       - path: /
