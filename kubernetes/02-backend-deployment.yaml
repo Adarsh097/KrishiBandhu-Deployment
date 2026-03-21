@@ -3,7 +3,7 @@ kind: Deployment
 
 metadata:
   name: backend-deployment
-  namespace: krishbandhu
+  namespace: krishibandhu
   labels:
     app: backend
 spec:
