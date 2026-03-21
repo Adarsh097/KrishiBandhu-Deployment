@@ -1,4 +1,18 @@
 ---
+- name: Fix apt mirror issues
+  block:
+    - name: Clean apt cache
+      command: apt-get clean
+
+    - name: Remove apt lists
+      command: rm -rf /var/lib/apt/lists/*
+
+    - name: Update apt cache with retry
+      apt:
+        update_cache: yes
+      retries: 3
+      delay: 10
+
 - name: Install dependencies
   apt:
     name:
@@ -9,16 +23,30 @@
     state: present
     update_cache: yes
 
-- name: Add Trivy repo key
-  shell: |
-    wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add -
+- name: Create keyrings directory
+  file:
+    path: /usr/share/keyrings
+    state: directory
+    mode: '0755'
 
-- name: Add Trivy repo
+- name: Add Trivy GPG key
   shell: |
-    echo "deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/trivy.list
+    wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key \
+    | gpg --dearmor -o /usr/share/keyrings/trivy.gpg
+  args:
+    creates: /usr/share/keyrings/trivy.gpg
+
+- name: Add Trivy repository
+  copy:
+    dest: /etc/apt/sources.list.d/trivy.list
+    content: |
+      deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
 
 - name: Install Trivy
   apt:
     name: trivy
     state: present
-    update_cache: yes
