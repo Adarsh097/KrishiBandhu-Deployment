@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: adarsh5559/krishibandhu-backend:5
+          image: adarsh5559/krishibandhu-backend:1
           imagePullPolicy: Always
 
           ports:
