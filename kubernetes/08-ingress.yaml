@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: krishibandhu-ingress
-  namespace: krishbandhu
+  namespace: krishibandhu
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
     kubernetes.io/ingress.class: "nginx"
@@ -14,7 +14,7 @@ spec:
     - krishibandhu.adtechs.xyz
     secretName: krishibandhu-tls-secret  # Cert-Manager will manage this
   rules:
-  - host: krishbandhu.adtechs.xyz
+  - host: krishibandhu.adtechs.xyz
     http:
       paths:
       - path: /

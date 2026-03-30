@@ -3,7 +3,7 @@ kind: Service
 
 metadata:
   name: frontend-service
-  namespace: krishbandhu
+  namespace: krishibandhu
   labels:
     app: frontend
 spec:
