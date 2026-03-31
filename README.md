@@ -1,5 +1,6 @@
 # 🚜 KrishiBandhu: Full-Stack Deployment Guide
 **KrishiBandhu** is a MERN-stack AI Voice Assistant designed to help farmers resolve agricultural queries in real time.
+![alt text](image-1.png)
 
 **App GitHub Repo:** https://github.com/Adarsh097/KrishiBandhu.git
 
