@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: adarsh5559/krishibandhu-frontend:8
+          image: adarsh5559/krishibandhu-frontend:9
           imagePullPolicy: Always 
           
           ports:
