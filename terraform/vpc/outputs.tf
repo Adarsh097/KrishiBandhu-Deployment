@@ -19,5 +19,5 @@ output "vpc_cidr_block" {
 }
 output "intra_subnets" {
   description = "Intra subnet IDs"
-  value = module.vpc.intra_subnets
+  value       = module.vpc.intra_subnets
 }

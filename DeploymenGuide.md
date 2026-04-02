@@ -310,6 +310,16 @@ aws iam create-policy \
 ## 5.3 Create IAM Role using eksctl
 
 ```
+ aws iam list-policies \
+  --scope Local \
+  --query "Policies[?PolicyName=='ExternalSecretsPolicy'].Arn" \
+  --output text
+arn:aws:iam::520827482778:policy/ExternalSecretsPolicy
+
+
+
+
+
 eksctl create iamserviceaccount \
   --name external-secrets-sa \
   --namespace krishibandhu \

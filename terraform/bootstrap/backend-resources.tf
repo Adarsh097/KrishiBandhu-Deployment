@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "state_lock" {
-  name         = "my-project-state-lock-table-5559-ad"
+  name         = "my-project-state-lock-table-5559-krishibandhu"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
 
@@ -9,12 +9,12 @@ resource "aws_dynamodb_table" "state_lock" {
   }
 
   tags = {
-    Name = "state-lock-table-5559-ad"
+    Name        = "state-lock-table-5559-krishibandhu"
     Environment = "production"
   }
 }
 resource "aws_s3_bucket" "remote_s3" {
-  bucket = "my-project-remote-terraform-state-bucket-5559-ad"
+  bucket = "my-project-remote-terraform-state-bucket-5559-krishibandhu"
 
   tags = {
     Name        = "RemoteTerraformStateBucket"
