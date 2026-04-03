@@ -167,6 +167,20 @@ A complete observability stack is implemented to ensure reliability and performa
 
 ---
 
+## 🎯 6. Outputs
+![alt text](<Screenshot from 2026-03-31 01-24-01.png>)
+
+![alt text](<Screenshot from 2026-04-02 14-09-29.png>)
+
+![alt text](<Screenshot from 2026-04-02 14-12-04.png>)
+
+![alt text](<Screenshot from 2026-04-02 14-11-17.png>)
+
+![alt text](<Screenshot from 2026-04-02 14-11-04.png>)
+
+![alt text](<Screenshot from 2026-04-02 14-09-09.png>)
+
+ --- 
 ## 🔐 7. Security and Best Practices
 
 * Remote Terraform state stored securely in S3
@@ -177,13 +191,7 @@ A complete observability stack is implemented to ensure reliability and performa
 
 ---
 
-## Output
-![alt text](<Screenshot from 2026-03-31 01-24-01.png>)
-![alt text](<Screenshot from 2026-04-02 14-09-29.png>)
-![alt text](<Screenshot from 2026-04-02 14-12-04.png>)
-![alt text](<Screenshot from 2026-04-02 14-11-17.png>)
-![alt text](<Screenshot from 2026-04-02 14-11-04.png>)
-![alt text](<Screenshot from 2026-04-02 14-09-09.png>)
+
 
 ## ⚠️ Important Note
 
