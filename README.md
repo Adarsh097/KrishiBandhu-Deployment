@@ -167,7 +167,7 @@ A complete observability stack is implemented to ensure reliability and performa
 
 ---
 
-## 🔐 6. Security and Best Practices
+## 🔐 7. Security and Best Practices
 
 * Remote Terraform state stored securely in S3
 * State locking enforced via DynamoDB
@@ -177,6 +177,14 @@ A complete observability stack is implemented to ensure reliability and performa
 
 ---
 
+## Output
+![alt text](<Screenshot from 2026-03-31 01-24-01.png>)
+![alt text](<Screenshot from 2026-04-02 14-09-29.png>)
+![alt text](<Screenshot from 2026-04-02 14-12-04.png>)
+![alt text](<Screenshot from 2026-04-02 14-11-17.png>)
+![alt text](<Screenshot from 2026-04-02 14-11-04.png>)
+![alt text](<Screenshot from 2026-04-02 14-09-09.png>)
+
 ## ⚠️ Important Note
 
 DynamoDB in this project is used **only for Terraform state locking** and is **not connected to the application database**.
@@ -185,7 +193,7 @@ The application database (MongoDB) runs inside the Kubernetes cluster.
 
 ---
 
-## 📌 7. Key Takeaways
+## 📌 8. Key Takeaways
 
 This project demonstrates a **production-grade DevOps system** with:
 
